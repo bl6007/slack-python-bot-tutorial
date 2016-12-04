@@ -39,12 +39,11 @@ def inbound():
 
 def forecast():
   api_key = "f0ad1b95c9fc6c9d0635c5b8a99f0b06"
-  lat = -31.967819
-  lng = 115.87718
+  lat = 37.5124413
+  lng = 126.9540519
 
   forecast = forecastio.load_forecast(api_key, lat, lng)
   byHour = forecast.hourly()
-  print byHour.summary
   return byHour.summary
 
 @app.route('/', methods=['GET'])
