@@ -28,7 +28,6 @@ def inbound():
     text = request.form.get('text')
     inbound_message = username + " in " + channel_name + " says: " + text
     send_message(channel_id, unicode("따라쟁이 놀이 ", 'utf-8') + " " + inbound_message)
-    print(inbound_message)
   return Response(), 200
 
 
